@@ -4,9 +4,9 @@
  *_puts - prints a string, followed by a new line, to stdout.
  * @str: the input string
  *
- * Return: nothing to return.
+ * Return: 0 nothing to return.
  */
-void _puts(char *str)
+int _puts(char *str)
 {
 	while (*str != 0)
 	{
@@ -14,6 +14,7 @@ void _puts(char *str)
 		str++;
 	}
 	_putchar('\n');
+	return (0);
 }
 
 /**
@@ -23,7 +24,7 @@ void _puts(char *str)
  * Return: On success 1.
  */
 
-int _putchar(char c)
+int _putchar(int c)
 {
 	return (write(1, &c, 1));
 }
