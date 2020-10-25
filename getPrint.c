@@ -14,6 +14,7 @@ int getPrint(char *s, va_list ap)
 		{"d", printInt},
 		{"i", printInt},
 		{"s", printStr},
+		{"%", printModulo},
 		{NULL, NULL}
 	};
 

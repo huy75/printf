@@ -20,7 +20,18 @@ int printStr(va_list ap)
 	char *str = va_arg(ap, char *);
 
 	if (str == NULL)
-		str = "(nil)";
+		str = "(null)";
 	return _puts(str);
 
+}
+
+/**
+ * printModulo - printModulo
+ * @ap : the argument
+ * Return: number of char
+ */
+
+int printModulo()
+{
+	return (_putchar('%'));
 }
