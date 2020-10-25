@@ -26,10 +26,12 @@ int printStr(va_list ap)
 
 /**
  * printModulo - printModulo
+ * @ap: the argument
  * Return: number of char
  */
 
-int printModulo(void)
+int printModulo(va_list ap)
 {
+	(void) ap;
 	return (_putchar('%'));
 }
