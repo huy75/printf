@@ -3,7 +3,7 @@
 /**
  * getPrint - finds the function
  * @s: the format string
- * @va_list: the parameters
+ * @ap: the parameters
  * Return: the number of bytes printed
  */
 int getPrint(char *s, va_list ap)

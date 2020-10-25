@@ -31,7 +31,7 @@ int getPrint(char *s, va_list);
 /* task 0: printAlpha.c module */
 int printStr(va_list ap);
 int printChar(va_list ap);
-int printModulo();
+int printModulo(void);
 /* task 1: printNum.c module */
 int printInt(va_list ap);
 

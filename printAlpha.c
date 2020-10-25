@@ -21,17 +21,15 @@ int printStr(va_list ap)
 
 	if (str == NULL)
 		str = "(null)";
-	return _puts(str);
-
+	return (_puts(str));
 }
 
 /**
  * printModulo - printModulo
- * @ap : the argument
  * Return: number of char
  */
 
-int printModulo()
+int printModulo(void)
 {
 	return (_putchar('%'));
 }
