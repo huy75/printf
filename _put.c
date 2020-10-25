@@ -19,6 +19,7 @@ int _putchar(int c)
  *
  * Return: number of chars printed.
  */
+
 int _puts(char *str)
 {
 	char *a = str;
