@@ -1,6 +1,6 @@
 #include <limits.h>
 #include <stdio.h>
-#include "holberton.h"
+#include "../holberton.h"
 
 /**
  * main - Entry point
@@ -27,6 +27,9 @@ int main(void)
 
 	_printf("*String:[%s]\n", "I am a string !");
         printf("String:[%s]\n", "I am a string !");
+
+	_printf("*Modulo: %%\n");
+	printf("Modulo: %%\n");
 
 /*
 
