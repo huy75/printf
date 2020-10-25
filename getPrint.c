@@ -6,7 +6,7 @@
  * @ap: the parameters
  * Return: the number of bytes printed
  */
-int getPrint(char *s, va_list ap)
+int getPrint(const char *s, va_list ap)
 {
 	int idx = 0;
 	specType fDict[] = {
