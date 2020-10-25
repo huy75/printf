@@ -2,25 +2,34 @@
 
 /**
  * convert - converts number and base into string
- * @num: input number
+ * @nb: input number
  * @base: input base
  * Return: result string
  */
-char *convert(unsigned long int num, int base)
+
+char *convert(unsigned long int nb, int base)
 {
-	static char *array;
-	static char buffer[50];
-	char *ptr;
+	char *convertTab = "0123456789ABCDEF";
+	char *buffer;
+	int lenbuffer = 0;
+	int nbT;
+	int i;
 
-	array = "0123456789ABCDEF";
-	ptr = &buffer[49];
-	*ptr = '\0';
-	do {
-		*--ptr = array[num % base];
-		num /= base;
-	} while (num);
-
-	return (ptr);
+	nbT = nb;
+	while (nbT != 0)
+	{
+		nbT = nbT / base;
+		lenbuffer++;
+	}
+	buffer = malloc(sizeof(char) * (lenbuffer + 1));
+	buffer[lenbuffer--] = '\0';
+	while (nb != 0)
+	{
+		buffer[lenbuffer] = convertTab[nb % base];
+		lenbuffer--;
+		nb = nb / base;
+	}
+	return (buffer);
 }
 
 /**
