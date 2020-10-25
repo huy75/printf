@@ -28,11 +28,15 @@ int _printf(const char *format, ...);
 /* get_print.c module */
 int getPrint(const char *s, va_list);
 
-/* task 0: printAlpha.c module */
+/* printAlpha.c module */
 int printStr(va_list ap);
 int printChar(va_list ap);
 int printModulo(va_list ap);
-/* task 1: printNum.c module */
+
+/* printNum.c module */
 int printInt(va_list ap);
+int printBinary(va_list ap);
+
+char *convert(unsigned long int num, int base);
 
 #endif
