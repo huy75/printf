@@ -1,65 +1,29 @@
 #include "holberton.h"
-/**
- * DetectSpecialChar - Detect a special character
- * @c: the special character
- * Return: 1 if detected 0 if not
- */
-
-
-int DetectSpecialChar(char c)
-{
-/*               %          '         \ work only with \\ in _printf*/
-	if (c == 37)
-		return (1);
-	else
-		return (0);
-}
 
 /**
- * _printf - print a string, if a special char is detected, print the corresponding variable depending of his type
- * @s: The main string
- * *.: variable to print
+ * _printf - prints
+ * @format: the first parameter
  * Return: number of printed char
  */
 
-int _printf(const char *s, ...)
+int _printf(const char *format, ...)
 {
-	int i;
-	int j;
-	int cp;
-	va_list va;
-	spec_type st[] = {
-		{"c", printChar},
-		{"s", printStr},
-		{"i", printInt},
-		{"d", printInt},
-		{NULL, NULL}
-	};
+	char *ptr;
+	int cp = 0;
+	va_list ap;
 
-	va_start(va, s);
-	cp = 0;
+	va_start(ap, format);
 
-	/*lecture de chaques char de s */
-	for (i = 0; s[i]; i++)
+	for (ptr = (char *)format; *ptr; ptr++)
 	{
-		if (DetectSpecialChar(s[i]) == 1)
+		if (*ptr != '%')
 		{
-			i++;
-			cp++;
-			for (j = 0; st[j].spec != '\0'; j++)
-			{
-				if (s[i] == *st[j].spec)
-				{
-					cp += st[j].f(va);
-				}
-			}
+			cp += _putchar(*ptr);
+			continue;
 		}
-		else
-		{
-			_putchar(s[i]);
-		}
-		cp++;
+		ptr++;
+		cp += getPrint(ptr, ap);
 	}
-	va_end(va);
+	va_end(ap);
 	return (cp);
 }
