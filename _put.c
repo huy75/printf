@@ -1,29 +1,32 @@
 #include "holberton.h"
 
 /**
+ * _putchar - writes the character c to stdout
+ * c: The character to print
+ *
+ * Return: 1.
+ */
+
+int _putchar(int c)
+{
+	write(1, &c, 1);
+	return (1);
+}
+
+/**
  *_puts - prints a string, followed by a new line, to stdout.
  * @str: the input string
  *
- * Return: nothing to return.
+ * Return: number of chars printed.
  */
-void _puts(char *str)
+int _puts(char *str)
 {
-	while (*str != 0)
+	char *a = str;
+
+	while (*str)
 	{
 		_putchar(*str);
 		str++;
 	}
-	_putchar('\n');
-}
-
-/**
- * _putchar - writes the character c to stdout
- * c: The character to print
- *
- * Return: On success 1.
- */
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
+	return (str - a);
 }
