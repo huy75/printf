@@ -3,11 +3,12 @@
 /**
  * printInt - prints integer
  * @ap: the argument
- * Return: 0.
+ * Return: the number of chars printed.
  */
 int printInt(va_list ap)
 {
 	int n =  va_arg(ap, int);
+	int cp = 0;
 	int p, nb;
 
 	p = 1;
@@ -19,16 +20,16 @@ int printInt(va_list ap)
 		nb = n / p;
 		if (nb < 0)
 		{
-			_putchar('-');
-			_putchar('0' - nb);
+			cp += _putchar('-');
+			cp += _putchar('0' - nb);
 			n = -(n - nb * p);
 		}
 		else
 		{
-			_putchar('0' + nb);
+			cp += _putchar('0' + nb);
 			n = n - nb * p;
 		}
 		p /= 10;
 	}
-	return (0);
+	return (cp);
 }
