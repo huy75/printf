@@ -26,7 +26,7 @@ int _putchar(int c);
 int _printf(const char *format, ...);
 
 /* get_print.c module */
-int getPrint(char *s, va_list);
+int getPrint(const char *s, va_list);
 
 /* task 0: printAlpha.c module */
 int printStr(va_list ap);
