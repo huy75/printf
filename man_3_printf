@@ -1,15 +1,16 @@
 .TH man 3 "25 October 2020" "0.1" "Homemade _printf function"
 .SH NAME
-.B _printf - implement _printf function from scratch
+.B _printf
+- implement _printf function (almost) from scratch
 .SH SYNOPSIS
 .B _printf()
 - a Holberton school project 'Write your own printf function' with standard library.
 .SH DESCRIPTION
-The function _printf is a variadic function that produces a string according to a
+The function _printf produces a string according to a
 .I format
-and prints it to the standard output. It can receive a variable number of arguments.
-This function has been created in the context of a first-year project for Holberton School.
-The objective is to reproduce the printf function. With our current technical skills, within limited time.
+to the standard output.
+It can receive a variable number of arguments, thanks to variadic function.
+Produced with our current technical skills, within limited time.
 .SH OPTIONS
 .B %c
 - prints a character
@@ -22,6 +23,9 @@ The objective is to reproduce the printf function. With our current technical sk
 .br
 .B %s
 - prints a string
+.br
+.B %b
+- prints a binary
 .SH SEE ALSO
 .I _putchar.c
 .SH NOTES
