@@ -9,6 +9,7 @@
 
 int _putchar(int c)
 {
+
 	static char buf[BUF_SIZE];
 	static int idx;
 
@@ -17,8 +18,9 @@ int _putchar(int c)
 		write(1, buf, idx);
 		idx = 0;
 	}
-	if (c != BUF_FLUSH)
+	else
 		buf[idx++] = c;
+
 	return (1);
 }
 
