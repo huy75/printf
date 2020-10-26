@@ -17,7 +17,7 @@ int printReverse(va_list ap)
 	ap1 = va_arg(ap, char *);
 	if (ap1 == NULL)
 	{
-		i = puts("(null)");
+		i = _puts("(null)");
 		return (i);
 	}
 
@@ -40,7 +40,7 @@ int printReverse(va_list ap)
 		s[i] = tps;
 		j--;
 	}
-	i = puts(s);
+	i = _puts(s);
 	free(s);
 	return (i);
 }
@@ -62,7 +62,7 @@ int printRot13(va_list ap)
 	ap1 = va_arg(ap, char *);
 	if (ap1 == NULL)
 	{
-		i = puts("(null)");
+		i = _puts("(null)");
 		return (i);
 	}
 	for (i = 0; ap1[i]; i++)
@@ -71,7 +71,7 @@ int printRot13(va_list ap)
 	s = malloc((sizeof(char)) * len);
 	if (s == NULL)
 	{
-		putchar('Z');
+		_putchar('Z');
 		return (0);
 	}
 	for (i = 0; ap1[i]; i++)
@@ -89,7 +89,7 @@ int printRot13(va_list ap)
 			}
 		}
 	}
-	i = puts(s);
+	i = _puts(s);
 	free(s);
 	return (i);
 }
