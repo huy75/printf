@@ -7,7 +7,8 @@
 #include <limits.h>
 #include <unistd.h>
 
-#define HEXA "0x"
+#define BUF_SIZE 1024
+#define BUF_FLUSH -1
 
 /**
  * struct specifier - Struct
@@ -37,15 +38,18 @@ int printModulo(va_list ap);
 
 /* printNum.c module */
 int printInt(va_list ap);
-int printBinary(va_list ap);
 int printUnsigned(va_list ap);
-int printHex(va_list ap);
-int printHEX(va_list ap);
+char *convert(unsigned long int num, int base, int lowercase);
+
+/* printBases.c module */
+int printBinary(va_list ap);
+int printHexL(va_list ap);
+int printHexU(va_list ap);
 int printOctal(va_list);
 
-char *convert(unsigned long int num, int base);
 /* printAlpha2.c module */
 int printReverse(va_list ap);
 int printRot13(va_list ap);
 int printS(va_list ap);
+
 #endif

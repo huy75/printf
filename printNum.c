@@ -7,14 +7,17 @@
  */
 int printUnsigned(va_list ap)
 {
-	int i;
-	unsigned long int u = va_arg(ap, unsigned long int);
 	char *str;
+	int i;
+	unsigned long int num = va_arg(ap, unsigned long int);
 
-	if (u == 0)
-		return(_putchar('0'));
+	if (num == 0)
+		return (_putchar('0'));
 
-	str = convert(u, 10);
+	str = convert(num, 10, 0);
+	if (str == NULL)
+		return (0);
+
 	i = _puts(str);
 	free(str);
 	return (i);
@@ -24,15 +27,18 @@ int printUnsigned(va_list ap)
  * convert - converts number and base into string
  * @nb: input number
  * @base: input base
+ * @lower: set to 1 only if called by printHexL
  * Return: result string
  */
 
-char *convert(unsigned long int nb, int base)
+char *convert(unsigned long int nb, int base, int lower)
 {
-	char convertTab[] = "0123456789ABCDEF";
+	char *convertTab;
 	char *buffer;
 	int lenbuffer = 0;
 	unsigned long int nbT;
+
+	convertTab = (lower) ? "0123456789abcdef" : "0123456789ABCDEF";
 
 	nbT = nb;
 
@@ -56,24 +62,6 @@ char *convert(unsigned long int nb, int base)
 	}
 	return (buffer);
 }
-
-/**
- * printBinary - prints binary number
- * @ap: the argument
- * Return: the number of bytes printed
- */
-int printBinary(va_list ap)
-{
-	unsigned int n = va_arg(ap, unsigned int);
-	char *str;
-	int i;
-
-	str = convert(n, 2);
-	i = _puts(str);
-	free(str);
-	return (i);
-}
-
 
 /**
  * printInt - prints integer
