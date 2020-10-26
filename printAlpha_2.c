@@ -17,7 +17,7 @@ int printReverse(va_list ap)
 	ap1 = va_arg(ap, char *);
 	if (ap1 == NULL)
 	{
-		i = puts("(null)";
+		i = puts("(null)");
 		return (i);
 	}
 
@@ -62,7 +62,7 @@ int printRot13(va_list ap)
 	ap1 = va_arg(ap, char *);
 	if (ap1 == NULL)
 	{
-		i = puts("(null)";
+		i = puts("(null)");
 		return (i);
 	}
 	for (i = 0; ap1[i]; i++)
