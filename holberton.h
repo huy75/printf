@@ -9,6 +9,7 @@
 
 #define BUF_SIZE 1024
 #define BUF_FLUSH -1
+#define HEX "0x"
 
 /**
  * struct specifier - Struct
@@ -45,7 +46,8 @@ char *convert(unsigned long int num, int base, int lowercase);
 int printBinary(va_list ap);
 int printHexL(va_list ap);
 int printHexU(va_list ap);
-int printOctal(va_list);
+int printOctal(va_list ap);
+int printAddr(va_list ap);
 
 /* printAlpha2.c module */
 int printReverse(va_list ap);

@@ -23,6 +23,7 @@ int getPrint(const char *s, va_list ap)
 		{"r", printReverse},
 		{"R", printRot13},
 		{"S", printS},
+		{"p", printAddr},
 		{NULL, NULL}
 	};
 

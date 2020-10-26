@@ -1,6 +1,30 @@
 #include "holberton.h"
 
 /**
+ * printAddr - prints address of input in hexa format
+ * @ap: va_list arguments from _printf
+ * Return: number of chars printed
+ */
+int printAddr(va_list ap)
+{
+	char *str;
+	int i;
+	unsigned long int num = va_arg(ap, unsigned long int);
+
+	if (num == 0)
+		return (_puts("(nil)"));
+
+	str = convert(num, 16, 1);
+	if (str == NULL)
+		return (0);
+
+        i = _puts(HEX) + _puts(str);
+	free(str);
+        return (i);
+}
+
+
+/**
  * printHexL - prints a number in hexadecimal base,
  * in lowercase
  * @ap: va_list arguments from _printf
