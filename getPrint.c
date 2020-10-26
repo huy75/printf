@@ -17,6 +17,9 @@ int getPrint(const char *s, va_list ap)
 		{"b", printBinary},
 		{"%", printModulo},
 		{"u", printUnsigned},
+		{"o", printOctal},
+		{"x", printHex},
+		{"X", printHEX},
 		{NULL, NULL}
 	};
 
