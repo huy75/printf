@@ -21,8 +21,8 @@ int getPrint(const char *s, va_list ap)
 *		{"o", printOctal},
 *		{"x", printHex},
 *		{"X", printHEX},
-*		{"S", printS},
 */
+		{"S", printS},
 		{"r", printReverse},
 		{"R", printRot13},
 		{NULL, NULL}
