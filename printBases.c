@@ -77,7 +77,7 @@ int printBinary(va_list ap)
 {
 	char *str;
 	int i;
-	unsigned long int num = va_arg(ap, unsigned long int);
+	unsigned int num = va_arg(ap, unsigned int);
 
 	if (num == 0)
 		return (_putchar('0'));
