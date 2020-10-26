@@ -94,24 +94,55 @@ int printRot13(va_list ap)
  * Return: 1 if printable, 0 if not
  */
 
-int checkPrintChar(int c)
+int checkPrintChar(char c)
 {
-	if (c > 0 && c < 32 && c >= 127)
+	if ((c > 0 && c < 32) || c >= 127)
+	{
 		return (0);
+	}
 	else
+	{
 		return (1);
+	}
 }
+
+/**
+ * convertHexTwoChar - Convert a char into hex into the pointer s2
+ * @nb: number;
+ * @s2: returned char *;
+ * Return: converted char with 2 char
+ */
+char *convertHexTwoChar(unsigned long int nb, char *s2)
+{
+	char *s;
+
+	s = convert(nb, 16, 0);
+	if (s[1] == '\0')
+	{
+		s2[0] = '0';
+		s2[1] = s[0];
+		s2[2] = '\0';
+	}
+	else
+	{
+		s2[0] = s[0];
+		s2[1] = s[1];
+		s2[2] = '\0';
+	}
+	if (s != NULL)
+		free(s);
+	return (s2);
+}
+
 /**
  * printS - print a string and replace no printable char by \x
  * @ap: va list
  * Return: Number of printed char
  */
-
 int printS(va_list ap)
 {
-	char *ap1;
+	char *ap1, *s, s2[2];
 	int i, j;
-	char *s;
 
 	ap1 = va_arg(ap, char*);
 	if (ap1 == NULL)
@@ -122,7 +153,7 @@ int printS(va_list ap)
 	for (i = 0; ap1[i]; i++)
 	{
 		if (checkPrintChar(ap1[i]) == 0)
-			i++;
+			i = i + 4;
 	}
 	s = malloc(sizeof(char) * i);
 	if (s == NULL)
@@ -137,11 +168,14 @@ int printS(va_list ap)
 		{
 			s[j++] = '\\';
 			s[j++] = 'x';
+			convertHexTwoChar(ap1[i], s2);
+			s[j++] = s2[0];
+			s[j++] = s2[1];
 		}
 		else
 			s[j++] = ap1[i];
 	}
-	i = puts(s);
+	i = _puts(s);
 	free(s);
 	return (i);
 }

@@ -9,7 +9,6 @@
 
 int _putchar(int c)
 {
-
 	static char buf[BUF_SIZE];
 	static int idx;
 
