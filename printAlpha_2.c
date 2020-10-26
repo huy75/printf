@@ -24,19 +24,19 @@ int printReverse(va_list ap)
 	;
 	len = i;
 
-	s = malloc((sizeof(char)) * len);
+	s = malloc((sizeof(char)) * (len + 1));
 	if (s == NULL)
+	{
+		_putchar('Z');
 		return (0);
-	for (i = 0; ap1[i]; i++)
-		s[i] = ap1[i];
-
-	len = i - 1;
-	j = len;
-	for (i = 0; i <= len; i++)
+	}
+	j = len - 1;
+	for (i = 0; i < len; i++)
 	{
 		s[i] = ap1[j];
 		j--;
 	}
+	s[i] = '\0';
 	i = _puts(s);
 	free(s);
 	return (i);
