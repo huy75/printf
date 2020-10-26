@@ -47,5 +47,5 @@ char *convert(unsigned long int num, int base);
 /* printAlpha2.c module */
 int printReverse(va_list ap);
 int printRot13(va_list ap);
-
+int printS(va_list ap);
 #endif
