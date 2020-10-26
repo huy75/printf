@@ -7,7 +7,8 @@
 #include <limits.h>
 #include <unistd.h>
 
-#define HEXA "0x"
+#define BUF_SIZE 1024
+#define BUF_FLUSH -1
 
 /**
  * struct specifier - Struct
