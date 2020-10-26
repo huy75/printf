@@ -36,6 +36,7 @@ int printModulo(va_list ap);
 /* printNum.c module */
 int printInt(va_list ap);
 int printBinary(va_list ap);
+int printUnsigned(va_list ap);
 
 char *convert(unsigned long int num, int base);
 

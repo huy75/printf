@@ -22,12 +22,10 @@ int _putchar(int c)
 
 int _puts(char *str)
 {
-	char *a = str;
+	int idx;
 
-	while (*str)
-	{
-		_putchar(*str);
-		str++;
-	}
-	return (str - a);
+	for (idx = 0; str[idx]; idx++)
+		_putchar(str[idx]);
+
+	return (idx);
 }

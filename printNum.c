@@ -1,6 +1,26 @@
 #include "holberton.h"
 
 /**
+ * printUnsigned - prints an unsigned integer
+ * @ap: va_list of arguments from _printf
+ * Return: number of char printed
+ */
+int printUnsigned(va_list ap)
+{
+	int i;
+	unsigned long int u = va_arg(ap, unsigned long int);
+	char *str;
+
+	if (u == 0)
+		return(_putchar('0'));
+
+	str = convert(u, 10);
+	i = _puts(str);
+	free(str);
+	return (i);
+}
+
+/**
  * convert - converts number and base into string
  * @nb: input number
  * @base: input base
@@ -12,9 +32,10 @@ char *convert(unsigned long int nb, int base)
 	char convertTab[] = "0123456789ABCDEF";
 	char *buffer;
 	int lenbuffer = 0;
-	int nbT;
+	unsigned long int nbT;
 
 	nbT = nb;
+
 	while (nbT != 0)
 	{
 		nbT = nbT / base;

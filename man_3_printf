@@ -16,7 +16,7 @@ Produced with our current technical skills, within limited time.
 - prints a character
 .br
 .B %%
-- Prints a %
+- prints a %
 .br
 .B  %d & %i
 - Prints an integer
@@ -26,6 +26,10 @@ Produced with our current technical skills, within limited time.
 .br
 .B %b
 - prints a binary
+.br
+.B %u
+- prints an unsigned integer
+.br
 .SH SEE ALSO
 .I _putchar.c
 .SH NOTES
