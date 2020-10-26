@@ -157,7 +157,7 @@ int printS(va_list ap)
 		if (checkPrintChar(ap1[i]) == 0)
 			i = i + 4;
 	}
-	s = malloc(sizeof(char) * i);
+	s = malloc(sizeof(char) * (i + 1));
 	if (s == NULL)
 	{
 		_putchar('Z');
@@ -177,6 +177,7 @@ int printS(va_list ap)
 		else
 			s[j++] = ap1[i];
 	}
+	s[i] = '\0';
 	i = _puts(s);
 	free(s);
 	return (i);
