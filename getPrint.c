@@ -16,10 +16,14 @@ int getPrint(const char *s, va_list ap)
 		{"s", printStr},
 		{"b", printBinary},
 		{"%", printModulo},
-		{"u", printUnsigned},
-		{"o", printOctal},
-		{"x", printHex},
-		{"X", printHEX},
+/*
+*		{"u", printUnsigned},
+*		{"o", printOctal},
+*		{"x", printHex},
+*		{"X", printHEX},
+*/
+		{"r", printReverse},
+		{"R", printRot13},
 		{NULL, NULL}
 	};
 
