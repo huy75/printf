@@ -9,7 +9,7 @@
 
 char *convert(unsigned long int nb, int base)
 {
-	char *convertTab = "0123456789ABCDEF";
+	char convertTab[] = "0123456789ABCDEF";
 	char *buffer;
 	int lenbuffer = 0;
 	int nbT;
@@ -21,6 +21,11 @@ char *convert(unsigned long int nb, int base)
 		lenbuffer++;
 	}
 	buffer = malloc(sizeof(char) * (lenbuffer + 1));
+	if (buffer == NULL)
+	{
+		_putchar('F');
+		return (NULL);
+	}
 	buffer[lenbuffer--] = '\0';
 	while (nb != 0)
 	{
