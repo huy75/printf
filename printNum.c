@@ -5,12 +5,13 @@
  * @ap: va_list of arguments from _printf
  * Return: number of char printed
  */
-int printUnsigned(va_list ap)
+int printUnsigned(va_list ap, flags_t *f)
 {
 	char *str;
 	int i;
 	unsigned long int num = va_arg(ap, unsigned long int);
 
+	(void)f;
 	if (num == 0)
 		return (_putchar('0'));
 
@@ -68,12 +69,13 @@ char *convert(unsigned long int nb, int base, int lower)
  * @ap: the argument
  * Return: the number of chars printed.
  */
-int printInt(va_list ap)
+int printInt(va_list ap, flags_t *f)
 {
 	int n =  va_arg(ap, int);
 	int cp = 0;
 	int p, nb;
 
+	(void)f;
 	p = 1;
 	while (n / p >= 10 || n / p <= -10)
 		p *= 10;

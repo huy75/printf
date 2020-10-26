@@ -5,12 +5,13 @@
  * @ap: va_list arguments from _printf
  * Return: number of chars printed
  */
-int printAddr(va_list ap)
+int printAddr(va_list ap, flags_t *f)
 {
 	char *str;
 	int i;
 	unsigned long int num = va_arg(ap, unsigned long int);
 
+	(void)f;
 	if (num == 0)
 		return (_puts("(nil)"));
 
@@ -30,12 +31,13 @@ int printAddr(va_list ap)
  * @ap: va_list arguments from _printf
  * Return: number of char printed
  */
-int printHexL(va_list ap)
+int printHexL(va_list ap, flags_t *f)
 {
 	char *str;
 	int i;
 	unsigned int num = va_arg(ap, unsigned int);
 
+	(void)f;
 	if (num == 0)
 		return (_putchar('0'));
 
@@ -53,12 +55,13 @@ int printHexL(va_list ap)
  * @ap: va_list arguments from _printf
  * Return: number of char printed
  */
-int printHexU(va_list ap)
+int printHexU(va_list ap, flags_t *f)
 {
 	char *str;
 	int i;
 	unsigned int num = va_arg(ap, unsigned int);
 
+	(void)f;
 	if (num == 0)
 		return (_putchar('0'));
 
@@ -75,12 +78,13 @@ int printHexU(va_list ap)
  * @ap: va_list arguments from _printf
  * Return: number of char printed
  */
-int printOctal(va_list ap)
+int printOctal(va_list ap, flags_t *f)
 {
 	char *str;
 	int i;
 	unsigned int num = va_arg(ap, unsigned int);
 
+	(void)f;
 	if (num == 0)
 		return (_putchar('0'));
 
@@ -97,12 +101,13 @@ int printOctal(va_list ap)
  * @ap: the argument
  * Return: the number of bytes printed
  */
-int printBinary(va_list ap)
+int printBinary(va_list ap, flags_t *f)
 {
 	char *str;
 	int i;
 	unsigned int num = va_arg(ap, unsigned int);
 
+	(void)f;
 	if (num == 0)
 		return (_putchar('0'));
 

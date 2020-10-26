@@ -6,7 +6,7 @@
  * @ap: the parameters
  * Return: the number of bytes printed
  */
-int getPrint(const char *s, va_list ap)
+int getPrint(const char *s, va_list ap, flags_t *fgs)
 {
 	int idx = 0;
 	specType fDict[] = {
@@ -30,7 +30,7 @@ int getPrint(const char *s, va_list ap)
 	while (fDict[idx].spec)
 	{
 		if (*s == fDict[idx].spec[0])
-			return (fDict[idx].f(ap));
+			return (fDict[idx].f(ap, fgs));
 		idx++;
 	}
 	return (0);

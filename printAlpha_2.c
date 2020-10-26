@@ -5,7 +5,7 @@
  * @ap: va list to  initialise a char *s
  * Return: Number of printed char
  */
-int printReverse(va_list ap)
+int printReverse(va_list ap, flags_t *f)
 {
 	char *s;
 	char *ap1;
@@ -13,6 +13,7 @@ int printReverse(va_list ap)
 	int j;
 	int len;
 
+	(void)f;
 	ap1 = va_arg(ap, char *);
 	if (ap1 == NULL)
 	{
@@ -45,7 +46,7 @@ int printReverse(va_list ap)
  * Return: Number of printed char
  */
 
-int printRot13(va_list ap)
+int printRot13(va_list ap, flags_t *f)
 {
 	char *tb1 = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 	char *tb2 = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
@@ -54,6 +55,7 @@ int printRot13(va_list ap)
 	int i, j, bl;
 	int len;
 
+	(void)f;
 	ap1 = va_arg(ap, char *);
 	if (ap1 == NULL)
 	{
@@ -139,11 +141,12 @@ char *convertHexTwoChar(unsigned long int nb, char *s2)
  * @ap: va list
  * Return: Number of printed char
  */
-int printS(va_list ap)
+int printS(va_list ap, flags_t *f)
 {
 	char *ap1, *s, s2[2];
 	int i, j;
 
+	(void)f;
 	ap1 = va_arg(ap, char*);
 	if (ap1 == NULL)
 	{
