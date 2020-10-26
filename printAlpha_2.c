@@ -129,6 +129,8 @@ char *convertHexTwoChar(unsigned long int nb, char *s2)
 		s2[1] = s[1];
 		s2[2] = '\0';
 	}
+	if (s != NULL)
+		free(s);
 	return (s2);
 }
 
