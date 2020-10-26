@@ -25,17 +25,19 @@ int printReverse(va_list ap, flags_t *f)
 	;
 	len = i;
 
-	s = malloc((sizeof(char)) * len);
-	for (i = 0; ap1[i]; i++)
-		s[i] = ap1[i];
-
-	len = i - 1;
-	j = len;
-	for (i = 0; i <= len; i++)
+	s = malloc((sizeof(char)) * (len + 1));
+	if (s == NULL)
+	{
+		_putchar('Z');
+		return (0);
+	}
+	j = len - 1;
+	for (i = 0; i < len; i++)
 	{
 		s[i] = ap1[j];
 		j--;
 	}
+	s[i] = '\0';
 	i = _puts(s);
 	free(s);
 	return (i);
@@ -158,7 +160,7 @@ int printS(va_list ap, flags_t *f)
 		if (checkPrintChar(ap1[i]) == 0)
 			i = i + 4;
 	}
-	s = malloc(sizeof(char) * i);
+	s = malloc(sizeof(char) * (i));
 	if (s == NULL)
 	{
 		_putchar('Z');
