@@ -10,6 +10,8 @@
 int _printf(const char *format, ...)
 {
 	char *ptr;
+
+	flags_t fgs = FLAGS_INIT;
 	int cp = 0;
 	va_list ap;
 
@@ -22,13 +24,13 @@ int _printf(const char *format, ...)
 
 	for (ptr = (char *)format; *ptr; ptr++)
 	{
-		if (*ptr != '%')
+		if (*ptr == '%')
 		{
-			cp += _putchar(*ptr);
-			continue;
+			ptr++;
+			cp += getPrint(ptr, ap, &fgs);
 		}
-		ptr++;
-		cp += getPrint(ptr, ap);
+		else
+			cp += _putchar(*ptr);
 	}
 	va_end(ap);
 	return (cp);

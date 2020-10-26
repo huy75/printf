@@ -5,8 +5,9 @@
  * @ap: the argument
  * Return: number of chars printed.
  */
-int printChar(va_list ap)
+int printChar(va_list ap, flags_t *f)
 {
+	(void)f;
 	return (_putchar(va_arg(ap, int)));
 }
 
@@ -15,10 +16,11 @@ int printChar(va_list ap)
  * @ap: the argument
  * Return: numbers of chars printed.
  */
-int printStr(va_list ap)
+int printStr(va_list ap, flags_t *f)
 {
 	char *str = va_arg(ap, char *);
 
+	(void)f;
 	if (str == NULL)
 		str = "(null)";
 	return (_puts(str));
@@ -30,8 +32,9 @@ int printStr(va_list ap)
  * Return: number of char
  */
 
-int printModulo(va_list ap)
+int printModulo(va_list ap, flags_t *f)
 {
-	(void) ap;
+	(void)ap;
+	(void)f;
 	return (_putchar('%'));
 }
