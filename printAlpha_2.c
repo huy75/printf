@@ -25,6 +25,8 @@ int printReverse(va_list ap)
 	len = i;
 
 	s = malloc((sizeof(char)) * len);
+	if (s == NULL)
+		return (0);
 	for (i = 0; ap1[i]; i++)
 		s[i] = ap1[i];
 
