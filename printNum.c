@@ -13,7 +13,6 @@ char *convert(unsigned long int nb, int base)
 	char *buffer;
 	int lenbuffer = 0;
 	int nbT;
-	int i;
 
 	nbT = nb;
 	while (nbT != 0)
