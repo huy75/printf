@@ -9,7 +9,6 @@ int printReverse(va_list ap)
 {
 	char *s;
 	char *ap1;
-	char tps;
 	int i;
 	int j;
 	int len;
@@ -27,17 +26,13 @@ int printReverse(va_list ap)
 
 	s = malloc((sizeof(char)) * len);
 	for (i = 0; ap1[i]; i++)
-	{
 		s[i] = ap1[i];
-	}
 
 	len = i - 1;
 	j = len;
-	for (i = 0; i != (len / 2); i++)
+	for (i = 0; i <= len; i++)
 	{
-		tps = s[j];
-		s[j] = s[i];
-		s[i] = tps;
+		s[i] = ap1[j];
 		j--;
 	}
 	i = _puts(s);
