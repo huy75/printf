@@ -39,10 +39,14 @@ int printModulo(va_list ap);
 int printInt(va_list ap);
 int printBinary(va_list ap);
 int printUnsigned(va_list ap);
-int printHex(va_list ap);
-int printHEX(va_list ap);
+int printHexL(va_list ap);
+int printHexU(va_list ap);
 int printOctal(va_list);
 
-char *convert(unsigned long int num, int base);
+char *convert(unsigned long int num, int base, int lowercase);
+/* printAlpha2.c module */
+int printReverse(va_list ap);
+int printRot13(va_list ap);
+int printS(va_list ap);
 
 #endif

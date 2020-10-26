@@ -18,12 +18,14 @@ int getPrint(const char *s, va_list ap)
 		{"%", printModulo},
 		{"u", printUnsigned},
 		{"o", printOctal},
-		{"x", printHex},
-		{"X", printHEX},
+		{"x", printHexL},
+		{"X", printHexU},
+		{"r", printReverse},
+		{"R", printRot13},
 		{NULL, NULL}
 	};
 
-	while (*fDict[idx].spec)
+	while (fDict[idx].spec)
 	{
 		if (*s == fDict[idx].spec[0])
 			return (fDict[idx].f(ap));
