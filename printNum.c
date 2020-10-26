@@ -15,6 +15,9 @@ int printUnsigned(va_list ap)
 		return (_putchar('0'));
 
 	str = convert(num, 10, 0);
+	if (str == NULL)
+		return (0);
+
 	i = _puts(str);
 	free(str);
 	return (i);

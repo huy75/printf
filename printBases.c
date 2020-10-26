@@ -16,6 +16,8 @@ int printHexL(va_list ap)
 		return (_putchar('0'));
 
 	str = convert(num, 16, 1);
+	if (str == NULL)
+		return (0);
 	i = _puts(str);
 	free(str);
 	return (i);
@@ -37,6 +39,8 @@ int printHexU(va_list ap)
 		return (_putchar('0'));
 
 	str = convert(num, 16, 0);
+	if (str == NULL)
+                return (0);
 	i = _puts(str);
 	free(str);
 	return (i);
@@ -57,6 +61,8 @@ int printOctal(va_list ap)
 		return (_putchar('0'));
 
 	str = convert(num, 8, 0);
+	if (str == NULL)
+                return (0);
 	i = _puts(str);
 	free(str);
 	return (i);
@@ -71,12 +77,14 @@ int printBinary(va_list ap)
 {
 	char *str;
 	int i;
-	unsigned int num = va_arg(ap, unsigned int);
+	unsigned long int num = va_arg(ap, unsigned long int);
 
 	if (num == 0)
 		return (_putchar('0'));
 
 	str = convert(num, 2, 0);
+	if (str == NULL)
+		return (0);
 	i = _puts(str);
 	free(str);
 	return (i);
