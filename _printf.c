@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 				continue;
 			}
 			while (getFlags(*ptr, &fgs))
-			       ptr++;
+				ptr++;
 			pF = getPrint(*ptr);
 			cp += (pF) ? pF(ap, &fgs) : _printf("%%%c", *ptr);
 		}
