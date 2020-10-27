@@ -1,4 +1,5 @@
 # Projet printF
+
 ## Table of content
 
 [What is this project ?](#What-is-this-project)
@@ -7,11 +8,11 @@
 
 [Usage](#Usage)
 
+[Description of the implemented option](#Description-of-the-implemented-option)
+
 [Description of the file structure](#Description-of-the-file-structure)
 
 [Quick description of each function by file](#Quick-description-of-each-function-by-file)
-
-[Usage](#Usage)
 
 [Contributor](#Contributor)
 
@@ -20,28 +21,55 @@
 The aim of this project is to code a version based on the  original printf function of the standard library <stdio.h>.
 As it's a learning exercise, some functions and requirements are added to the original printf.
 
-### Building
+### Building 🥳
 
 1 - Download the folder
 
 2 - Compile with a compiler. 
 `gcc *.c`
 
-### Usage
+### Usage 💪
 
-To use the core function called _printf, you can call it like the original printf, see man printf for more information.
+To use the core function _printf, you can call it like the original printf, see man printf for more information.
 
-For example, to display a string and replace the %s by passed argument. If argument string1 = "Boad" and argument  string2 = "Plane".
+For example: 
+```
+char c = 'a';
 
-_printf("My first string %s, my second string %s"), string1, string2);
+char b = 'd';
 
-Will display:
+_printf("My first string %c, my second string %c"), c, b);
 
-`My first string Boad, my second string Plane`
-
+OUTPUT : My first char a, my second char d
+```
 You can replace <%s> <%option> where option is any option of the man pages.
 
-### Description of the file structure
+### Description of the implemented option 👀
+
+%c - prints a character.
+
+%s - prints a string.
+
+%% - prints a %.
+
+%d, %i - prints an integer.
+
+%o, %b - respectively print a number in octal and binary base.
+
+%x,  %X  - respecively print a number in lowercase and uppercase
+hexadecimal base.
+
+%u - prints an unsigned integer.
+%S - handles non-printable characters: \x, followed by the ASCII
+       code value in uppercase hexadecimal.
+
+%p - prints an address, given by a pointer variable.
+
+%r - prints a string in reverse.
+
+%R - prints a string in rot13 encryption
+
+### Description of the file structure 👀
 | FileName | Description |
 |---|---|
 | man_3_printf  | This file contain the man pages of the printf function.  |
@@ -55,7 +83,7 @@ You can replace <%s> <%option> where option is any option of the man pages.
 | printAlpha.c  | This file contains all the string function : printChar, printStr, printModulo.  |
 | printNum.c  | This file contains all the printed number functions: printUnsigned and printInt. It also contain a converter from base 10 to a choosen base. |
 
-### Quick description of each function by file
+### Quick description of each function by file 👀
 
 | File Name  | Function Name | Function Description  |
 |---|---|---|
@@ -81,5 +109,5 @@ You can replace <%s> <%option> where option is any option of the man pages.
 |   | convert  | Function used by all the conversion functions and the printS function, in order to convert a decimal number into a choosen bases, handle until base 16.  |
 |   | printInt  | Function used for the option %i or %d in order to print an integer.  |
 
-### Contributor
-This project was created by Huy Nguyen and Olivier Guyot for Holberton school.
+### Contributor 👬
+This project was created by [Huy Nguyen](https://github.com/huy75) and [Olivier Guyot](https://github.com/toyugo) for Holberton school.
