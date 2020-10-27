@@ -1,26 +1,56 @@
-# PrintF
-# [My first title](#What-is-this-project)
-# Table of content
+# Projet printF
+## Table of content
 
+[What is this project ?](#What-is-this-project)
+
+[Building](#Building)
+
+[Usage](#Usage)
+
+[Description of the file structure](#Description-of-the-file-structure)
+
+[Quick description of each function by file](#Quick-description-of-each-function-by-file)
+
+[Usage](#Usage)
+
+[Contributor](#Contributor)
 
 ### What is this project
 
 The aim of this project is to code a version based on the  original printf function of the standard library <stdio.h>.
 As it's a learning exercise, some functions and requirements are added to the original printf.
 
-### How to read this readme
+### Building
 
-The main structure part describe all the different file and associated functions.
+1 - Download the folder
 
-The quick description part is an overview of all the used functions.
+2 - Compile with a compiler. 
+`gcc *.c`
 
-The usage part is the how to use the _printf function with example. 
+### Usage
 
-You can have other information by reading the`[man_3_printf]` pages with the man function.
+To use the core function called _printf, you can call it like the original printf, see man printf for more information.
 
-** all file name or between bracket [FILE NAME] **
+For example, to display a string and replace the %s by passed argument. If argument string1 = "Boad" and argument  string2 = "Plane".
+
+_printf("My first string %s, my second string %s"), string1, string2);
+
+Will display:
+
+`My first string Boad, my second string Plane`
+
+You can replace <%s> <%option> where option is any option of the man pages.
 
 ### Description of the file structure
+| FileName | Description |
+|---|---|
+| man_3_printf  | This file contain the man pages of the printf function.  |
+| holberton.h  | This file is the header file.  |
+|   |   |
+|   |   |
+|   |   |
+|   |   |
+
 `[man_3_printf]`
 
 This file contain the man pages of the printf function.
@@ -112,22 +142,6 @@ getPrint.c
 `convert` : Function used by all the conversion functions and the printS function, in order to convert a decimal number into a choosen bases, handle until base 16.
 
 `printInt` : Function used for the option %i or %d in order to print an integer.
-### Usage
-Compile all the .c file with the gcc.
-
-There is no main file so, if you needed to test it, you have to create one. A folder main_test contain some main function to test the program, it s not exhaustive and not maintained.
-
-To use the core function called _printf, you can call it like the original printf, see man printf for more information.
-
-For example, to display a string and replace the %s by passed argument. If argument string1 = "Boad" and argument  string2 = "Plane".
-
-_printf("My first string %s, my second string %s"), string1, string2);
-
-Will display:
-
-`My first string Boad, my second string Plane`
-
-You can replace <%s> <%option> where option is any option of the man pages.
 
 ### Contributor
 This project was created by Huy Nguyen and Olivier Guyot for Holberton school.
