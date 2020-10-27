@@ -17,14 +17,19 @@ You can have other information by reading the`man_3_printf` pages with the man f
 ### MAIN STRUCTURE
 `man_3_printf`
 
-	This file contain the man pages of the printf function.
+This file contain the man pages of the printf function.
 
 `holberton.h`
-	This file contain all the prototype of the used function.
+
+This file contain all the prototype of the used function.
+
 `_printf.c`
-	This file contain the core function _printf.
+
+This file contain the core function _printf.
+
 `getPrint.c`
-	This file contain the getPrint function used to find and call the needed function. It was created in order to make the code easier to read.
+This file contain the getPrint function used to find and call the needed function. It was created in order to make the code easier to read.
+
 `_put.c`
 	This file contain the _putchar and _puts functions.
 [printAlpha.c]
