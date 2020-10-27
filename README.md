@@ -1,10 +1,10 @@
 # PrintF
-### WHAT IS THIS PROJECT
+### What is this project
 
 The aim of this project is to code a version based on the  original printf function of the standard library <stdio.h>.
 As it's a learning exercise, some function and requirement are added to the original printfl.
 
-### HOW TO READ THE README
+### How to read this readme
 
 The main structure part describe all the different file and associated functions.
 
@@ -16,7 +16,7 @@ You can have other information by reading the`[man_3_printf]` pages with the man
 
 ** all file name or between bracket [FILE NAME] **
 
-### MAIN STRUCTURE
+### Description of the file structure
 `[man_3_printf]`
 
 This file contain the man pages of the printf function.
@@ -50,7 +50,7 @@ This file contain all conversion functions : printAddr, printHexL, printHexU, pr
 
 This file contain all the printed number functions: printUnsigned and printInt. It also contain a converter from base 10 to a choosen base.
 
-### QUICK DESCRIPTION OF EACH FUNCTION BY [FILE]
+### Quick description of each function by file
 
 `[_printf.c]`
 
@@ -106,7 +106,7 @@ getPrint.c
 `convert` : Function used by all the conversion functions and the printS function, in order to convert a decimal number into a choosen bases, handle until base 16.
 
 `printInt` : Function used for the option %i or %d in order to print an integer.
-### USAGE
+### Usage
 Compile all the .c file with the gcc.
 
 There is no main file so, if you needed to test it, you have to create one. A folder main_test contain some main function to test the program, it s not exhaustive and not maintained.
@@ -123,5 +123,5 @@ Will display:
 
 You can replace <%s> <%option> where option is any option of the man pages.
 
-### CONTRIBUTOR
+### Contributor
 This project was created by Huy Nguyen and Olivier Guyot for Holberton school.
