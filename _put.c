@@ -17,7 +17,7 @@ int _putchar(int c)
 		write(1, &buf, idx);
 		idx = 0;
 	}
-	else
+	if (c != BUF_FLUSH)
 	{
 		buf[idx] = c;
 		idx++;

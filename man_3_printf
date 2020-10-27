@@ -47,6 +47,12 @@ hexadecimal base.
 .B %p
 - prints an address, given by a pointer variable
 .br
+.B %r
+- prints a string in reverse
+.br
+.B %R
+- prints a string in rot13 encryption
+.br
 .SH SEE ALSO
 .I _putchar.c
 .SH NOTES
