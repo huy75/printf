@@ -11,18 +11,16 @@ Then there is the USAGE part with example.
 
 If you need more information about a specific function, please visite the MAN pages in the man_3_printf. You can display it with a linux machine by using the function man <PATH><FILENAME>.
 
-*File name are written between bracket [filename].
-
 ### MAIN STRUCTURE
-[man_3_printf]
+`man_3_printf`
 	This file contain the man pages of the printf function.
-[holberton.h]
+`holberton.h`
 	This file contain all the prototype of the used function.
-[_printf.c]
+`_printf.c`
 	This file contain the core function _printf.
-[getPrint.c]
+`getPrint.c`
 	This file contain the getPrint function used to find and call the needed function. It was created in order to make the code easier to read.
-[_put.c]
+`_put.c`
 	This file contain the _putchar and _puts functions.
 [printAlpha.c]
 	This file contain all the string function : printChar, printStr, printModulo.
