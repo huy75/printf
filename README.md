@@ -2,7 +2,7 @@
 
 ## Table of content
 
-[What is this project](#What-is-this-project)
+[What is this project](#What-is-this-project-😀)
 
 [Building](#Building)
 
@@ -16,8 +16,7 @@
 
 [Contributor](#Contributor)
 
-### What is this project 
-😀
+### What is this project 😀
 
 The aim of this project is to code a version based on the original printf function of the standard library `stdio.h`.
 Some functions and requirements are added to the original printf.
