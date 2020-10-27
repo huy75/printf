@@ -3,6 +3,7 @@
 /**
  * printReverse - print a reverse string
  * @ap: va list to  initialise a char *s
+ * @f: pointer to the flags structure
  * Return: Number of printed char
  */
 int printReverse(va_list ap, flags_t *f)
@@ -45,6 +46,7 @@ int printReverse(va_list ap, flags_t *f)
 /**
  * printRot13 - print a string with rot13 encryption
  * @ap: va list to  initialise a char *s
+ * @f: pointer to the flags structure
  * Return: Number of printed char
  */
 
@@ -52,10 +54,8 @@ int printRot13(va_list ap, flags_t *f)
 {
 	char *tb1 = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 	char *tb2 = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
-	char *s;
-	char *ap1;
-	int i, j, bl;
-	int len;
+	char *s, *ap1;
+	int i, j, bl, len;
 
 	(void)f;
 	ap1 = va_arg(ap, char *);
@@ -141,6 +141,7 @@ char *convertHexTwoChar(unsigned long int nb, char *s2)
 /**
  * printS - print a string and replace no printable char by \x
  * @ap: va list
+ * @f: pointer to the flags structure
  * Return: Number of printed char
  */
 int printS(va_list ap, flags_t *f)

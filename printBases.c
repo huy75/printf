@@ -3,6 +3,7 @@
 /**
  * printAddr - prints address of input in hexa format
  * @ap: va_list arguments from _printf
+ * @f: pointer to the flags structure
  * Return: number of chars printed
  */
 int printAddr(va_list ap, flags_t *f)
@@ -19,9 +20,9 @@ int printAddr(va_list ap, flags_t *f)
 	if (str == NULL)
 		return (0);
 
-        i = _puts(HEX) + _puts(str);
+	i = _puts(HEX) + _puts(str);
 	free(str);
-        return (i);
+	return (i);
 }
 
 
@@ -29,6 +30,7 @@ int printAddr(va_list ap, flags_t *f)
  * printHexL - prints a number in hexadecimal base,
  * in lowercase
  * @ap: va_list arguments from _printf
+ * @f: pointer to the flags structure
  * Return: number of char printed
  */
 int printHexL(va_list ap, flags_t *f)
@@ -53,6 +55,7 @@ int printHexL(va_list ap, flags_t *f)
  * printHexU - prints a number in hexadecimal base,
  * in uppercase
  * @ap: va_list arguments from _printf
+ * @f: pointer to the flags structure
  * Return: number of char printed
  */
 int printHexU(va_list ap, flags_t *f)
@@ -67,7 +70,7 @@ int printHexU(va_list ap, flags_t *f)
 
 	str = convert(num, 16, 0);
 	if (str == NULL)
-                return (0);
+		return (0);
 	i = _puts(str);
 	free(str);
 	return (i);
@@ -76,6 +79,7 @@ int printHexU(va_list ap, flags_t *f)
 /**
  * printOctal - prints a number in base 8
  * @ap: va_list arguments from _printf
+ * @f: pointer to the flags structure
  * Return: number of char printed
  */
 int printOctal(va_list ap, flags_t *f)
@@ -90,7 +94,7 @@ int printOctal(va_list ap, flags_t *f)
 
 	str = convert(num, 8, 0);
 	if (str == NULL)
-                return (0);
+		return (0);
 	i = _puts(str);
 	free(str);
 	return (i);
@@ -99,6 +103,7 @@ int printOctal(va_list ap, flags_t *f)
 /**
  * printBinary - prints binary number
  * @ap: the argument
+ * @f: pointer to the flags structure
  * Return: the number of bytes printed
  */
 int printBinary(va_list ap, flags_t *f)

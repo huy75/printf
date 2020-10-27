@@ -3,6 +3,7 @@
 /**
  * printChar - prints character
  * @ap: the argument
+ * @f: pointer to the flags structure
  * Return: number of chars printed.
  */
 int printChar(va_list ap, flags_t *f)
@@ -14,6 +15,7 @@ int printChar(va_list ap, flags_t *f)
 /**
  * printStr - prints string
  * @ap: the argument
+ * @f: pointer to the flags structure
  * Return: numbers of chars printed.
  */
 int printStr(va_list ap, flags_t *f)
@@ -29,6 +31,7 @@ int printStr(va_list ap, flags_t *f)
 /**
  * printModulo - printModulo
  * @ap: the argument
+ * @f: pointer to the flags structure
  * Return: number of char
  */
 

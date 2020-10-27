@@ -3,6 +3,7 @@
 /**
  * printUnsigned - prints an unsigned integer
  * @ap: va_list of arguments from _printf
+ * @f: pointer to the flags structure
  * Return: number of char printed
  */
 int printUnsigned(va_list ap, flags_t *f)
@@ -67,6 +68,7 @@ char *convert(unsigned long int nb, int base, int lower)
 /**
  * printInt - prints integer
  * @ap: the argument
+ * @f: pointer to the flags structure
  * Return: the number of chars printed.
  */
 int printInt(va_list ap, flags_t *f)
