@@ -47,8 +47,7 @@ You can replace <%s> <%option> where option is any option of the man pages.
 | man_3_printf  | This file contain the man pages of the printf function.  |
 | holberton.h  | This file is the header file.  |
 | _printf.c  | This file contains the core function _printf. |
-|  getPrint.c | This file contains the getPrint function used to find and call the needed function. It was created in order to make the code easier to read.
-  |
+|  getPrint.c | This file contains the getPrint function used to find and call the needed function. It was created in order to make the code easier to read. |
 | _put.c  | This file contains the _putchar and _puts functions.  |
 | printAlpha.c  | This file contains all the string function : printChar, printStr, printModulo.  |
 | printAlpha_2.c | This file contains other string function : printReverse, printRot13, checkPrintChar, convertHexTwoChar, printS.  |
