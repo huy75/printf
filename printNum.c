@@ -52,7 +52,6 @@ char *convert(unsigned long int nb, int base, int lower)
 	buffer = malloc(sizeof(char) * (lenbuffer + 1));
 	if (buffer == NULL)
 	{
-		_putchar('F');
 		return (NULL);
 	}
 	buffer[lenbuffer--] = '\0';
