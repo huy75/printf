@@ -15,20 +15,37 @@ Produced with our current technical skills, within limited time.
 .B %c
 - prints a character
 .br
-.B %%
-- prints a %
-.br
-.B  %d & %i
-- Prints an integer
-.br
 .B %s
 - prints a string
 .br
-.B %b
-- prints a binary
+.B %%
+- prints a %
+.br
+.B  %d, %i
+- prints an integer
+.br
+.B %o, %b
+- respectively print a number in
+.I octal
+and
+.I binary
+base.
+.br
+.B %x, %X
+- respecively print a number in
+. I lowercase
+and
+. I uppercase
+hexadecimal base.
 .br
 .B %u
 - prints an unsigned integer
+.br
+.B %S
+- handles non-printable characters: \\x, followed by the ASCII code value in uppercase hexadecimal.
+.br
+.B %p
+- prints an address, given by a pointer variable
 .br
 .SH SEE ALSO
 .I _putchar.c

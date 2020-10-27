@@ -32,6 +32,7 @@ int _printf(const char *format, ...)
 		else
 			cp += _putchar(*ptr);
 	}
+	_putchar(BUF_FLUSH);
 	va_end(ap);
 	return (cp);
 }
