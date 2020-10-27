@@ -1,4 +1,4 @@
-• WHAT IS THIS PROJECT
+• WHAT IS THIS PROJECT\n
 The aim of this project is to code a version based on the  original printf function of the standard library <stdio.h>.
 As it's a learning exercise, some function and requirement are added to the original printfl.
 
