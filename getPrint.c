@@ -1,9 +1,8 @@
-#include "holberton.h"
+B#include "holberton.h"
 
 /**
  * getPrint - finds the function
  * @s: the format string
- * @ap: the parameters
  * Return: the number of bytes printed
  */
 int (*getPrint(char s))(va_list, flags_t *)
@@ -22,7 +21,7 @@ int (*getPrint(char s))(va_list, flags_t *)
 		{'S', printS},
 		{'p', printAddr},
 		{'r', printReverse},
-                {'R', printRot13},
+		{'R', printRot13},
 		{'\0', NULL}
 	};
 
