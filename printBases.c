@@ -46,7 +46,7 @@ int printHexL(va_list ap, flags_t *f)
 	if (str == NULL)
 		return (0);
 
-	if (f->hashtagf && *str != '0')
+	if (f->hashtagf)
 		i += _puts(HEX);
 
 	i += _puts(str);
@@ -74,7 +74,7 @@ int printHexU(va_list ap, flags_t *f)
 	if (str == NULL)
 		return (0);
 
-	if (f->hashtagf && *str != '0')
+	if (f->hashtagf)
 		i += _puts(HEX);
 
 	i += _puts(str);
@@ -101,7 +101,7 @@ int printOctal(va_list ap, flags_t *f)
 	if (str == NULL)
 		return (0);
 
-	if (f->hashtagf && *str != '0')
+	if (f->hashtagf)
 		i += _putchar('0');
 
 	i += _puts(str);
