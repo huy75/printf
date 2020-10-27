@@ -2,7 +2,7 @@
 ### What is this project
 
 The aim of this project is to code a version based on the  original printf function of the standard library <stdio.h>.
-As it's a learning exercise, some function and requirement are added to the original printfl.
+As it's a learning exercise, some functions and requirements are added to the original printf.
 
 ### How to read this readme
 
@@ -23,32 +23,34 @@ This file contain the man pages of the printf function.
 
 `holberton.h`
 
-This file contain all the prototype of the used function.
+This file is the header file.
 
 `[_printf.c]`
 
-This file contain the core function _printf.
+This file contains the core function _printf.
 
 `[getPrint.c]`
-This file contain the getPrint function used to find and call the needed function. It was created in order to make the code easier to read.
+This file contains the getPrint function used to find and call the needed function. It was created in order to make the code easier to read.
 
 `[_put.c]`
-	This file contain the _putchar and _puts functions.
+
+This file contains the _putchar and _puts functions.
+
 `[printAlpha.c]`
 
-This file contain all the string function : printChar, printStr, printModulo.
+This file contains all the string function : printChar, printStr, printModulo.
 
 `[printAlpha_2.c]`
 
-This file contain other string function : printReverse, printRot13, checkPrintChar, convertHexTwoChar, printS.
+This file contains other string function : printReverse, printRot13, checkPrintChar, convertHexTwoChar, printS.
 
 `[printBases.c]`
 
-This file contain all conversion functions : printAddr, printHexL, printHexU, printOctal, printBinary.
+This file contains all conversion functions : printAddr, printHexL, printHexU, printOctal, printBinary.
 
 `[printNum.c]`
 
-This file contain all the printed number functions: printUnsigned and printInt. It also contain a converter from base 10 to a choosen base.
+This file contains all the printed number functions: printUnsigned and printInt. It also contain a converter from base 10 to a choosen base.
 
 ### Quick description of each function by file
 
