@@ -10,7 +10,7 @@ The main structure part describe all the different file and associated functions
 
 The quick description part is an overview of all the used functions.
 
-the usage part is the how to use the _printf function with example. 
+The usage part is the how to use the _printf function with example. 
 
 You can have other information by reading the`[man_3_printf]` pages with the man function.
 
