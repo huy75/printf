@@ -32,18 +32,28 @@ This file contain the getPrint function used to find and call the needed functio
 
 `_put.c`
 	This file contain the _putchar and _puts functions.
-[printAlpha.c]
-	This file contain all the string function : printChar, printStr, printModulo.
-[printAlpha_2.c]
-	This file contain other string function : printReverse, printRot13, checkPrintChar, convertHexTwoChar, printS.
-[printBases.c]
-	This file contain all conversion functions : printAddr, printHexL, printHexU, printOctal, printBinary.
-[printNum.c]
-	This file contain all the printed number functions: printUnsigned and printInt. It also contain a converter from base 10 to a choosen base.
+`[printAlpha.c]`
+
+This file contain all the string function : printChar, printStr, printModulo.
+
+`[printAlpha_2.c]`
+
+This file contain other string function : printReverse, printRot13, checkPrintChar, convertHexTwoChar, printS.
+
+`[printBases.c]`
+
+This file contain all conversion functions : printAddr, printHexL, printHexU, printOctal, printBinary.
+
+`[printNum.c]`
+
+This file contain all the printed number functions: printUnsigned and printInt. It also contain a converter from base 10 to a choosen base.
 
 ### QUICK DESCRIPTION OF EACH FUNCTION BY [FILE]
-[_printf.c]
-	_printf : Core function used to print into the standard output a string in which we can add some option like %s, %c... which refered to the passed arguments. See usage for more information.
+
+`[_printf.c]`
+
+	`_printf` : Core function used to print into the standard output a string in which we can add some option like %s, %c... which refered to the passed arguments. See usage for more information.
+
 
 [_put.c]
 	_putchar : Function to display a character in the standard output. This function handle a buffer of size 1024 to optimize the printf function.
