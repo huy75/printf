@@ -1,10 +1,13 @@
 • WHAT IS THIS PROJECT
+
 The aim of this project is to code a version based on the  original printf function of the standard library <stdio.h>.
 As it's a learning exercise, some function and requirement are added to the original printfl.
 
 • HOW TO READ THE README
+
 In the first you will see the main file's structure , then a quick description of each function by files.
 Then there is the USAGE part with example.
+
 If you need more information about a specific function, please visite the MAN pages in the man_3_printf. You can display it with a linux machine by using the function man <PATH><FILENAME>.
 
 *File name are written between bracket [filename].
