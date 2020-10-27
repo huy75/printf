@@ -158,7 +158,7 @@ int printS(va_list ap, flags_t *f)
 	}
 	for (i = 0; ap1[i]; i++)
 	{
-		if (checkPrintChar(ap1[i++]) == 0)
+		if (checkPrintChar(ap1[i]) == 0)
 		{
 			cp += 4;
 			i++;
