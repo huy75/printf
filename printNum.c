@@ -76,7 +76,11 @@ int printInt(va_list ap, flags_t *f)
 	int cp = 0;
 	int p, nb;
 
-	(void)f;
+	if (f->plusf && n >= 0)
+		cp = _putchar('+');
+	if (f->spacef && !f->plusf && n >= 0)
+		cp = _putchar(' ');
+
 	p = 1;
 	while (n / p >= 10 || n / p <= -10)
 		p *= 10;

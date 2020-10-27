@@ -36,17 +36,19 @@ int printAddr(va_list ap, flags_t *f)
 int printHexL(va_list ap, flags_t *f)
 {
 	char *str;
-	int i;
+	int i = 0;
 	unsigned int num = va_arg(ap, unsigned int);
 
-	(void)f;
 	if (num == 0)
 		return (_putchar('0'));
 
 	str = convert(num, 16, 1);
 	if (str == NULL)
 		return (0);
-	i = _puts(str);
+
+	if (f->hashtagf)
+		i += _puts(HEX);
+	i += _puts(str);
 	free(str);
 	return (i);
 }
@@ -61,17 +63,20 @@ int printHexL(va_list ap, flags_t *f)
 int printHexU(va_list ap, flags_t *f)
 {
 	char *str;
-	int i;
+	int i = 0;
 	unsigned int num = va_arg(ap, unsigned int);
 
-	(void)f;
 	if (num == 0)
 		return (_putchar('0'));
 
 	str = convert(num, 16, 0);
 	if (str == NULL)
 		return (0);
-	i = _puts(str);
+
+	if (f->hashtagf)
+		i += _puts(HEX);
+
+	i += _puts(str);
 	free(str);
 	return (i);
 }
@@ -85,17 +90,20 @@ int printHexU(va_list ap, flags_t *f)
 int printOctal(va_list ap, flags_t *f)
 {
 	char *str;
-	int i;
+	int i = 0;
 	unsigned int num = va_arg(ap, unsigned int);
 
-	(void)f;
 	if (num == 0)
 		return (_putchar('0'));
 
 	str = convert(num, 8, 0);
 	if (str == NULL)
 		return (0);
-	i = _puts(str);
+
+	if (f->hashtagf)
+		i += _putchar('0');
+
+	i += _puts(str);
 	free(str);
 	return (i);
 }
