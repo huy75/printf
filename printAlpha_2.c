@@ -147,7 +147,7 @@ char *convertHexTwoChar(unsigned long int nb, char *s2)
 int printS(va_list ap, flags_t *f)
 {
 	char *ap1, *s, s2[2];
-	int i, j, cp;
+	int i, j = 0, cp = 0;
 
 	(void)f;
 	ap1 = va_arg(ap, char*);
@@ -159,16 +159,15 @@ int printS(va_list ap, flags_t *f)
 	for (i = 0; ap1[i]; i++)
 	{
 		if (checkPrintChar(ap1[i++]) == 0)
+		{
 			cp += 4;
+			i++;
+		}
 		cp++;
 	}
 	s = malloc(sizeof(char) * (cp + 1));
 	if (s == NULL)
-	{
-		_putchar('Z');
 		return (0);
-	}
-	j = 0;
 	for (i = 0; ap1[i]; i++)
 	{
 		if (checkPrintChar(ap1[i]) == 0)
