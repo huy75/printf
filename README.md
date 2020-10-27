@@ -2,7 +2,7 @@
 
 ## Table of content
 
-[What is this project](#What-is-this-project-😀)
+[What is this project](#What-is-this-project)
 
 [Building](#Building)
 
@@ -16,21 +16,21 @@
 
 [Contributor](#Contributor)
 
-### What is this project 😀
+😀### What is this project 
 
 The aim of this project is to code a version based on the original printf function of the standard library `stdio.h`.
 Some functions and requirements are added to the original printf.
 
-### Building
-🥳
+🥳### Building
+
 
 1 - Download the folder
 
 2 - Compile all the file .c with a compiler.
 `gcc *.c`
 
-### Usage
-💪
+💪### Usage
+
 
 To use the core function _printf, you can call it like the original printf, see man printf for more information.
 
@@ -46,8 +46,8 @@ OUTPUT : My first char a, my second char d
 ```
 You can replace <%s> <%option> where option is any option of the man pages.
 
-### Description of the implemented option
-👀
+👀### Description of the implemented option
+
 
 %c - prints a character.
 
@@ -72,8 +72,8 @@ hexadecimal base.
 
 %R - prints a string in rot13 encryption
 
-### Description of the file structure
-👀
+👀### Description of the file structure
+
 | FileName | Description |
 |---|---|
 | man_3_printf  | This file contain the man pages of the printf function.  |
@@ -87,8 +87,8 @@ hexadecimal base.
 | printAlpha.c  | This file contains all the string function : printChar, printStr, printModulo.  |
 | printNum.c  | This file contains all the printed number functions: printUnsigned and printInt. It also contain a converter from base 10 to a choosen base. |
 
-### Quick description of each function by file
-👀
+👀### Quick description of each function by file
+
 
 | File Name  | Function Name | Function Description  |
 |---|---|---|
@@ -114,6 +114,6 @@ hexadecimal base.
 |   | convert  | Function used by all the conversion functions and the printS function, in order to convert a decimal number into a choosen bases, handle until base 16.  |
 |   | printInt  | Function used for the option %i or %d in order to print an integer.  |
 
-### Contributor
-👬
+👬### Contributor
+
 This project was created by [Huy Nguyen](https://github.com/huy75) and [Olivier Guyot](https://github.com/toyugo) for Holberton school.
