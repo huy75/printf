@@ -15,7 +15,7 @@
 
 [Contributor](#Contributor)
 
-### What is this project
+### What is this project 😀
 
 The aim of this project is to code a version based on the  original printf function of the standard library <stdio.h>.
 As it's a learning exercise, some functions and requirements are added to the original printf.
