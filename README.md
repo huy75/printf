@@ -1,9 +1,10 @@
-• WHAT IS THIS PROJECT
+# PrintF
+### WHAT IS THIS PROJECT
 
 The aim of this project is to code a version based on the  original printf function of the standard library <stdio.h>.
 As it's a learning exercise, some function and requirement are added to the original printfl.
 
-• HOW TO READ THE README
+### HOW TO READ THE README
 
 In the first you will see the main file's structure , then a quick description of each function by files.
 Then there is the USAGE part with example.
@@ -12,7 +13,7 @@ If you need more information about a specific function, please visite the MAN pa
 
 *File name are written between bracket [filename].
 
-• MAIN STRUCTURE
+### MAIN STRUCTURE
 [man_3_printf]
 	This file contain the man pages of the printf function.
 [holberton.h]
@@ -32,7 +33,7 @@ If you need more information about a specific function, please visite the MAN pa
 [printNum.c]
 	This file contain all the printed number functions: printUnsigned and printInt. It also contain a converter from base 10 to a choosen base.
 
-• QUICK DESCRIPTION OF EACH FUNCTION BY [FILE]
+### QUICK DESCRIPTION OF EACH FUNCTION BY [FILE]
 [_printf.c]
 	_printf : Core function used to print into the standard output a string in which we can add some option like %s, %c... which refered to the passed arguments. See usage for more information.
 
@@ -62,7 +63,7 @@ getPrint.c
 	printUnsigned : Function used for the option %u to print an unsigned number.
 	convert : Function used by all the conversion functions and the printS function, in order to convert a decimal number into a choosen bases, handle until base 16.
 	printInt : Function used for the option %i or %d in order to print an integer.
-• USAGE
+### USAGE
 Compile all the .c file with the gcc.
 There is no main file so, if you needed to test it, you have to create one. A folder main_test contain some main function to test the program, it s not exhaustive and not maintained.
 
@@ -74,5 +75,5 @@ The function will display:
 	My first string Boad, my second string Plane
 You can replace <%s> <%option> where option is any option of the man pages.
 
-• CONTRIBUTOR
+### CONTRIBUTOR
 This project was created by Huy Nguyen and Olivier Guyot for Holberton school.
