@@ -18,14 +18,14 @@
 
 ### What is this project 😀
 
-The aim of this project is to code a version based on the  original printf function of the standard library <stdio.h>.
-As it's a learning exercise, some functions and requirements are added to the original printf.
+The aim of this project is to code a version based on the original printf function of the standard library `stdio.h`.
+Some functions and requirements are added to the original printf.
 
 ### Building 🥳
 
 1 - Download the folder
 
-2 - Compile with a compiler. 
+2 - Compile all the file .c with a compiler.
 `gcc *.c`
 
 ### Usage 💪
