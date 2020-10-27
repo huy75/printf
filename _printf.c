@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 
 	flags_t fgs = FLAGS_INIT;
 	int cp = 0;
+	int (*pF)(va_list, flags_t *);
 	va_list ap;
 
 	va_start(ap, format);
@@ -27,7 +28,15 @@ int _printf(const char *format, ...)
 		if (*ptr == '%')
 		{
 			ptr++;
-			cp += getPrint(ptr, ap, &fgs);
+			if (*ptr == '%')
+			{
+				cp += _putchar(*ptr);
+				continue;
+			}
+			while (getFlags(*ptr, &fgs))
+			       ptr++;
+			pF = getPrint(*ptr);
+			cp += (pF) ? pF(ap, &fgs) : _printf("%%%c", *ptr);
 		}
 		else
 			cp += _putchar(*ptr);

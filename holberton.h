@@ -15,22 +15,21 @@
 /**
  * struct flags - flags on / off
  * when used with a printf command
- * @plus_flag: on if plus_flag specified
- * @space_flag: on if hashtag_flag specified
- * @hashtag_flag: on if _flag specified
- * @h_modifier: on if h_modifier is specified
- * @l_modifier: on if l_modifier is specified
+ * @plusf: on if plus_flag specified
+ * @spacef: on if hashtag_flag specified
+ * @hashtagf: on if _flag specified
+ * @hmod: on if h_modifier is specified
+ * @lmod: on if l_modifier is specified
  *
  */
 typedef struct flags
 {
-	unsigned int plus_flag;
-	unsigned int space_flag;
-	unsigned int hashtag_flag;
-	unsigned int h_modifier;
-        unsigned int l_modifier;
+	unsigned int plusf;
+	unsigned int spacef;
+	unsigned int hashtagf;
+	unsigned int hmod;
+        unsigned int lmod;
 } flags_t;
-
 
 /**
  * struct specifier - Struct
@@ -39,11 +38,11 @@ typedef struct flags
  */
 typedef struct specifier
 {
-	char *spec;
+	char spec;
 	int (*f)(va_list ap, flags_t *f);
 } specType;
 
-
+/* _put.c module */
 int _puts(char *str);
 int _putchar(int c);
 
@@ -51,7 +50,8 @@ int _putchar(int c);
 int _printf(const char *format, ...);
 
 /* get_print.c module */
-int getPrint(const char *s, va_list, flags_t *f);
+int (*getPrint(char s))(va_list, flags_t *);
+int getFlags(char s, flags_t *f);
 
 /* printAlpha.c module */
 int printStr(va_list ap, flags_t *f);
@@ -70,7 +70,7 @@ int printHexU(va_list ap, flags_t *f);
 int printOctal(va_list ap, flags_t *f);
 int printAddr(va_list ap, flags_t *f);
 
-/* printAlpha2.c module */
+/* printAlpha_2.c module */
 int printReverse(va_list ap, flags_t *f);
 int printRot13(va_list ap, flags_t *f);
 int printS(va_list ap, flags_t *f);
