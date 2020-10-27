@@ -6,14 +6,19 @@ As it's a learning exercise, some function and requirement are added to the orig
 
 ### HOW TO READ THE README
 
-In the first you will see the main file's structure , then a quick description of each function by files.
-Then there is the USAGE part with example.
+The main structure part describe all the different file and associated functions.
 
-If you need more information about a specific function, please visite the MAN pages in the man_3_printf. You can display it with a linux machine by using the function man <PATH><FILENAME>.
+The quick description part is an overview of all the used functions.
+
+the usage part is the how to use the _printf function with example. 
+
+You can have other information by reading the`man_3_printf` pages with the man function.
 
 ### MAIN STRUCTURE
 `man_3_printf`
+
 	This file contain the man pages of the printf function.
+
 `holberton.h`
 	This file contain all the prototype of the used function.
 `_printf.c`
