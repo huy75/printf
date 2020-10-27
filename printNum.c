@@ -10,7 +10,7 @@ int printUnsigned(va_list ap, flags_t *f)
 {
 	char *str;
 	int i;
-	unsigned long int num = va_arg(ap, unsigned long int);
+	unsigned int num = va_arg(ap, unsigned int);
 
 	(void)f;
 	if (num == 0)
