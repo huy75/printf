@@ -28,7 +28,7 @@ typedef struct flags
 	unsigned int spacef;
 	unsigned int hashtagf;
 	unsigned int hmod;
-        unsigned int lmod;
+	unsigned int lmod;
 } flags_t;
 
 /**
