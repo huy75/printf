@@ -53,6 +53,19 @@ hexadecimal base.
 .B %R
 - prints a string in rot13 encryption
 .br
+.sp
+.B Flag characters for conversion specifiers
+.sp
+.B +
+- prints a '+' sign in front of positive integers and a '-' sign in front of negative integers. + overrides a space when both flags are given.
+.sp
+.B ' '
+- prints a space in front of signed integers.
+.sp
+.B #
+- modifier for o, x and X. For x, adds \(dq0x\(dq, and for X, adds \(dq0X\(dq in front of the number. For o, if the converted number doesn't already begin with a 0, adds a 0.
+.sp
+.br
 .SH SEE ALSO
 .I _putchar.c
 .SH NOTES
