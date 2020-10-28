@@ -10,9 +10,15 @@ int printUnsigned(va_list ap, flags_t *f)
 {
 	char *str;
 	int i;
-	unsigned int num = va_arg(ap, unsigned int);
+	unsigned long num;
 
-	(void)f;
+	if (f->lmod)
+		num = va_arg(ap, unsigned long);
+	else if (f->hmod)
+		num = (unsigned short int)va_arg(ap, unsigned int);
+	else
+		num = (unsigned int)va_arg(ap, unsigned int);
+
 	if (num == 0)
 		return (_putchar('0'));
 
@@ -72,32 +78,39 @@ char *convert(unsigned long int nb, int base, int lower)
  */
 int printInt(va_list ap, flags_t *f)
 {
-	int n =  va_arg(ap, int);
 	int cp = 0;
 	int p, nb;
+	long num;
 
-	if (f->plusf && n >= 0)
+	if (f->lmod)
+		num = va_arg(ap, long);
+	else if (f->hmod)
+		num = (short int)va_arg(ap, int);
+	else
+		num = (int)va_arg(ap, int);
+
+	if (f->plusf && num >= 0)
 		cp = _putchar('+');
-	if (f->spacef && !f->plusf && n >= 0)
+	if (f->spacef && !f->plusf && num >= 0)
 		cp = _putchar(' ');
 
 	p = 1;
-	while (n / p >= 10 || n / p <= -10)
+	while (num / p >= 10 || num / p <= -10)
 		p *= 10;
 
 	while (p)
 	{
-		nb = n / p;
+		nb = num / p;
 		if (nb < 0)
 		{
 			cp += _putchar('-');
 			cp += _putchar('0' - nb);
-			n = -(n - nb * p);
+			num = -(num - nb * p);
 		}
 		else
 		{
 			cp += _putchar('0' + nb);
-			n = n - nb * p;
+			num = num - nb * p;
 		}
 		p /= 10;
 	}

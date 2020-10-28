@@ -10,7 +10,7 @@ int printAddr(va_list ap, flags_t *f)
 {
 	char *str;
 	int i;
-	unsigned long int num = va_arg(ap, unsigned long int);
+	unsigned long num = va_arg(ap, unsigned long);
 
 	(void)f;
 	if (num == 0)
@@ -37,7 +37,14 @@ int printHexL(va_list ap, flags_t *f)
 {
 	char *str;
 	int i = 0;
-	unsigned int num = va_arg(ap, unsigned int);
+	unsigned long num;
+
+	if (f->lmod)
+		num = va_arg(ap, unsigned long);
+	else if (f->hmod)
+		num = (unsigned short int)va_arg(ap, unsigned int);
+	else
+		num = (unsigned int)va_arg(ap, unsigned int);
 
 	if (num == 0)
 		return (_putchar('0'));
@@ -65,7 +72,14 @@ int printHexU(va_list ap, flags_t *f)
 {
 	char *str;
 	int i = 0;
-	unsigned int num = va_arg(ap, unsigned int);
+	unsigned long num;
+
+	if (f->lmod)
+		num = va_arg(ap, unsigned long);
+	else if (f->hmod)
+		num = (unsigned short int)va_arg(ap, unsigned int);
+	else
+		num = (unsigned int)va_arg(ap, unsigned int);
 
 	if (num == 0)
 		return (_putchar('0'));
@@ -92,7 +106,14 @@ int printOctal(va_list ap, flags_t *f)
 {
 	char *str;
 	int i = 0;
-	unsigned int num = va_arg(ap, unsigned int);
+	unsigned long num;
+
+	if (f->lmod)
+		num = va_arg(ap, unsigned long);
+	else if (f->hmod)
+		num = (unsigned short int)va_arg(ap, unsigned int);
+	else
+		num = (unsigned int)va_arg(ap, unsigned int);
 
 	if (num == 0)
 		return (_putchar('0'));
