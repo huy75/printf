@@ -17,12 +17,10 @@ int _printf(const char *format, ...)
 	va_list ap;
 
 	va_start(ap, format);
-
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
-
 	for (ptr = (char *)format; *ptr; ptr++)
 	{
 		if (*ptr == '%')
