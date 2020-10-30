@@ -20,7 +20,7 @@ int printAddr(va_list ap, flags_t *f)
 	if (str == NULL)
 		return (0);
 
-	i = _puts(HEX) + _puts(str);
+	i = _puts("0x") + _puts(str);
 	free(str);
 	return (i);
 }
@@ -54,7 +54,7 @@ int printHexL(va_list ap, flags_t *f)
 		return (0);
 
 	if (f->hashtagf)
-		i += _puts(HEX);
+		i += _puts("0x");
 
 	i += _puts(str);
 	free(str);
@@ -89,7 +89,7 @@ int printHexU(va_list ap, flags_t *f)
 		return (0);
 
 	if (f->hashtagf)
-		i += _puts(HEX);
+		i += _puts("0X");
 
 	i += _puts(str);
 	free(str);

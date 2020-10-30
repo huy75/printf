@@ -9,7 +9,7 @@
 
 #define BUF_SIZE 1024
 #define BUF_FLUSH -1
-#define HEX "0x"
+
 #define FLAGS_INIT {0, 0, 0, 0, 0}
 
 /**
@@ -52,6 +52,7 @@ int _printf(const char *format, ...);
 /* get_print.c module */
 int (*getPrint(char s))(va_list, flags_t *);
 int getFlags(char s, flags_t *f);
+int getModifier(char s, flags_t *f);
 
 /* printAlpha.c module */
 int printStr(va_list ap, flags_t *f);

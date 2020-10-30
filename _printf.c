@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	char *ptr;
+	char *ptr, *start;
 
 	flags_t fgs = FLAGS_INIT;
 	int cp = 0;
@@ -33,10 +33,17 @@ int _printf(const char *format, ...)
 				cp += _putchar(*ptr);
 				continue;
 			}
+			start = ptr;
 			while (getFlags(*ptr, &fgs))
 				ptr++;
 			pF = getPrint(*ptr);
-			cp += (pF) ? pF(ap, &fgs) : _printf("%%%c", *ptr);
+			if (!pF)
+			{
+				cp += _putchar('%');
+				ptr = start - 1;
+			}
+			else
+				cp += pF(ap, &fgs);
 		}
 		else
 			cp += _putchar(*ptr);
