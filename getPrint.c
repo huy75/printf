@@ -61,29 +61,3 @@ int getFlags(char s, flags_t *f)
 	}
 	return (found);
 }
-
-
-/**
- * getModifier - finds the modifier func
- * @s: the format string
- * @f: the flags struct
- *
- * Return: if modifier was valid
- */
-int getModifier(char s, flags_t *f)
-{
-	int found = 1;
-
-	switch (s)
-	{
-	case 'h':
-		f->hmod = 1;
-		break;
-	case 'l':
-		f->lmod = 1;
-		break;
-       	default:
-		found = 0;
-	}
-	return (found);
-}
